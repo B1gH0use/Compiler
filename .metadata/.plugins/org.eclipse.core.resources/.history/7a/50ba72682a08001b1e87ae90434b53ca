@@ -1,0 +1,71 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+import javax.swing.JFileChooser;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
+public class OpenAndReadFile {
+	
+	//separar por pavalra e indentificar com o code
+
+	public static String SelectFile() {
+		
+		JFileChooser chooseFile = new JFileChooser();
+		
+		try {
+			
+			chooseFile.setFileSelectionMode(JFileChooser.FILES_ONLY);
+			
+			int returnVal = chooseFile.showOpenDialog(null);
+			
+			if(returnVal == JFileChooser.APPROVE_OPTION) { 
+				return chooseFile.getSelectedFile().getPath();
+			}
+			
+		} catch (Exception e) {
+			System.out.println("Erro selecionar o arquivo");
+		}
+		return chooseFile.getSelectedFile().getPath();
+	}
+	
+	public static void ReadFile(String pFile) {
+		
+		String line = null;
+		String[] splitLine = null;
+	
+		try {
+			
+			BufferedReader br = new BufferedReader(new FileReader(pFile));
+			
+			while(br.ready()){
+				line = br.readLine();
+				splitLine = line.split(" ");
+				line.replace(" ", "");
+				//System.out.println(line);
+				for(int i=0; i<splitLine.length; i++) {
+					System.out.println(splitLine[i]);
+				}
+			}
+			
+			
+			
+			br.close();
+			
+		} catch (Exception e) {
+			System.out.println("Erro ler arquivo");
+		}
+		
+	}
+	
+	
+	
+	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+		UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		
+		ReadFile("C:\\Users\\victo\\Desktop\\new 2.txt");
+		
+	}
+	
+	
+}

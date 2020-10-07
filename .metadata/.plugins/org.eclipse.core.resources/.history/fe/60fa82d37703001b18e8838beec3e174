@@ -1,0 +1,16 @@
+package GUI;
+import javax.swing.JDialog;
+
+@SuppressWarnings("serial")
+public class WindowCompiler extends JDialog {
+
+	public WindowCompiler() {
+		
+		
+		
+		
+	}
+	
+	
+	
+}

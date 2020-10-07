@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;GUI.teste.java&apos; to &apos;LineNumbering.java&apos;&#x0D;&#x0A;- Original project: &apos;CompilerClassGUI&apos;&#x0D;&#x0A;- Original element: &apos;GUI.teste.java&apos;&#x0D;&#x0A;- Renamed element: &apos;GUI.LineNumbering.java&apos;" description="Rename compilation unit &apos;teste.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;GUI{teste.java" name="LineNumbering.java" references="false" stamp="1601750737269" version="1.0"/>
+</session>
